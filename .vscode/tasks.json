@@ -1,0 +1,34 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++ sestavit aktivní soubor",
+			"command": "/usr/bin/g++",
+			"args": [
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/bin/${fileBasenameNoExtension}",
+				"-lX11",
+				"-lGL",
+				"-lpthread",
+				"-lpng",
+				"-lstdc++fs",
+				"-I${workspaceFolder}/olcPixelGameEngine/",
+				"-std=c++17"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "kompilátor: /usr/bin/g++"
+		}
+	]
+}
